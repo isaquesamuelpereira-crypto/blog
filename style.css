@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #ffffff; /* Fundo branco para toda a página */
+    color: #111111;            /* Texto preto quase puro para maior conforto visual */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    background-color: #ffffff;
+    color: #111111;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 2px solid #111111; /* Linha preta elegante de separação */
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #444444; /* Preto suave para a descrição */
+}
+
+/* Estilo do Conteúdo Principal */
+main {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+main h2 {
+    color: #111111;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+main p {
+    font-size: 1rem;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+/* Imagem da Bicicleta */
+.vlog-img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+
+/* Secção do Botão de Curtida */
+.like-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+}
+
+/* Botão Interativo Minimalista */
+button#likeBtn {
+    background-color: #ffffff;
+    color: #111111;
+    border: 2px solid #111111;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o rato (inverte as cores para preto no fundo e texto branco) */
+button#likeBtn:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+button#likeBtn:active {
+    transform: scale(0.98);
+}
+💡 Principais destaques deste estilo:
+Fundo 100% Branco: Toda a página e secções usam #ffffff.
+
+Alto Contraste: O texto em preto (#111111) garante máxima legibilidade.
+
+aur
