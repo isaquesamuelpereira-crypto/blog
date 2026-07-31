@@ -1,15 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pedal Urbano - Vlog de Bicicleta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .vlog-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .like-section {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+    </style>
 </head>
 <body>
-    <header></header>
-    <h1>h1 titulo principal</h1>
-        <p>explicaçâo breve</p>
-        </header>
-        <main</main>
+
+    <header>
+        <h1>Pedal Urbano: Explorando a Cidade</h1>
+        <p>Acompanhe minhas aventuras diárias e dicas sobre o mundo do ciclismo!</p>
+    </header>
+
+    <main>
+        <h2>Episódio 01: Testando a nova Bike Urbana</h2>
+        <p>Hoje saí para testar a minha nova bicicleta urbana nas ciclovias da cidade. O desempenho foi incrível e a pedalada super macia!</p>
+        
+        <img class="vlog-img" src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=800" alt="Bicicleta em um cenário urbano">
+
+        <div class="like-section">
+            <button id="likeBtn">❤️ Curtir (<span id="likeCount">0</span>)</button>
+        </div>
+    </main>
+
+    <script>
+        let likes = 0;
+        const button = document.getElementById('likeBtn');
+        const countSpan = document.getElementById('likeCount');
+
+        button.addEventListener('click', () => {
+            likes++;
+            countSpan.textContent = likes;
+        });
+    </script>
+
 </body>
 </html>
