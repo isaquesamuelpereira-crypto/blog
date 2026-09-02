@@ -1,106 +1,168 @@
+/* Variaveis para o Tema */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --text-secondary: #444444;
+    --border-color: #111111;
+    --card-bg: #f9f9f9;
+    --card-border: #2563eb;
+    --link-color: #2563eb;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Tema Escuro */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --text-secondary: #cccccc;
+    --border-color: #f1f1f1;
+    --card-bg: #1e1e1e;
+    --card-border: #60a5fa;
+    --link-color: #60a5fa;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo com Transição Suave */
 body {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #ffffff; /* Fundo branco para toda a página */
-    color: #111111;            /* Texto preto quase puro para maior conforto visual */
-    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
     padding: 20px;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Estilo do Cabeçalho */
+/* Cabeçalho */
 header {
-    background-color: #ffffff;
-    color: #111111;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 2px solid #111111; /* Linha preta elegante de separação */
     max-width: 800px;
     margin: 0 auto 30px auto;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem; /* Aumentado */
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     letter-spacing: -0.5px;
 }
 
 header p {
-    font-size: 1.1rem;
-    color: #444444; /* Preto suave para a descrição */
+    font-size: 1.25rem; /* Aumentado */
+    color: var(--text-secondary);
 }
 
-/* Estilo do Conteúdo Principal */
+/* Conteúdo Principal */
 main {
-    background-color: #ffffff;
     max-width: 800px;
     margin: 0 auto;
-    padding: 10px 0;
 }
 
 main h2 {
-    color: #111111;
-    font-size: 1.6rem;
+    font-size: 1.9rem; /* Aumentado */
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 main p {
-    font-size: 1rem;
-    color: #222222;
-    margin-bottom: 20px;
+    font-size: 1.15rem; /* Aumentado */
+    margin-bottom: 25px;
 }
 
-/* Imagem da Bicicleta */
 .vlog-img {
     width: 100%;
     height: auto;
     max-height: 450px;
     object-fit: cover;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
     margin-bottom: 25px;
 }
 
-/* Secção do Botão de Curtida */
-.like-section {
+/* Secção de Botões Curtir/Descurtir */
+.feedback-section {
     display: flex;
-    justify-content: flex-start;
+    gap: 15px;
     align-items: center;
-    padding-top: 15px;
-    border-top: 1px solid #eeeeee;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    margin-bottom: 30px;
 }
 
-/* Botão Interativo Minimalista */
-button#likeBtn {
-    background-color: #ffffff;
-    color: #111111;
-    border: 2px solid #111111;
-    padding: 10px 22px;
-    font-size: 1rem;
+.action-btn, #themeToggleBtn {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    padding: 10px 20px;
+    font-size: 1.05rem;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Efeito ao passar o rato (inverte as cores para preto no fundo e texto branco) */
-button#likeBtn:hover {
-    background-color: #111111;
-    color: #ffffff;
+.action-btn:hover, #themeToggleBtn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
-button#likeBtn:active {
-    transform: scale(0.98);
+.action-btn:active, #themeToggleBtn:active {
+    transform: scale(0.96);
 }
-💡 Principais destaques deste estilo:
-Fundo 100% Branco: Toda a página e secções usam #ffffff.
 
-Alto Contraste: O texto em preto (#111111) garante máxima legibilidade.
+/* Estilo Ativado para Curtida/Descurtida */
+.action-btn.active {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
 
-aur
+/* Caixa de Fontes */
+.fonte-box {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--card-border);
+    transition: background-color 0.4s ease;
+}
+
+.fonte-box h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem; /* Aumentado */
+}
+
+.fonte-box ul {
+    padding-left: 20px;
+}
+
+.fonte-box li {
+    margin-bottom: 10px;
+    font-size: 1.1rem; /* Aumentado */
+}
+
+.fonte-box a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.fonte-box a:hover {
+    text-decoration: underline;
+}

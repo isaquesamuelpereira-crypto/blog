@@ -1,48 +1,48 @@
-<style>
-  .fonte-box {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-    /* Sombra suave e elegante */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #2563eb;
-  }
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlog de Ciclismo Urbano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  .fonte-box h3 {
-    margin-top: 0;
-    color: #1e293b;
-    font-size: 1.1rem;
-  }
+    <header>
+        <div class="header-top">
+            <button id="themeToggleBtn" aria-label="Alternar Tema">🌙 Modo Escuro</button>
+        </div>
+        <h1>Vlog sobre Ciclismo</h1>
+        <p>Dicas de mobilidade urbana, segurança e manutenção</p>
+    </header>
 
-  .fonte-box ul {
-    margin: 0;
-    padding-left: 20px;
-    color: #475569;
-  }
+    <main>
+        <h2>A Importância da Bicicleta na Cidade</h2>
+        <p>Pedalar no dia a dia melhora a saúde e ajuda a diminuir o tráfego nas grandes cidades.</p>
+        
+        <img src="bicicleta.jpg" alt="Bicicleta em ambiente urbano" class="vlog-img">
 
-  .fonte-box li {
-    margin-bottom: 8px;
-  }
+        <div class="feedback-section">
+            <button id="likeBtn" class="action-btn">
+                👍 Curtir <span id="likeCount">0</span>
+            </button>
+            <button id="dislikeBtn" class="action-btn">
+                👎 Descurtir <span id="dislikeCount">0</span>
+            </button>
+        </div>
 
-  .fonte-box a {
-    color: #2563eb;
-    text-decoration: none;
-  }
+        <section class="fonte-box">
+            <h3>Fontes e Referências de Pesquisa</h3>
+            <ul>
+                <li><a href="https://www.vadebike.org" target="_blank" rel="noopener">Vá de Bike</a> – Mobilidade e Ciclismo Urbano</li>
+                <li><a href="https://aliancabike.org.br" target="_blank" rel="noopener">Aliança Bike</a> – Associação Brasileira do Setor de Bicicletas</li>
+                <li><a href="https://www.pedal.com.br" target="_blank" rel="noopener">Pedal.com.br</a> – Testes e Notícias Técnicas</li>
+                <li><a href="https://www.gov.br/transportes/pt-br" target="_blank" rel="noopener">Código de Trânsito Brasileiro (CTB)</a> – Normas e Segurança</li>
+                <li><a href="https://bike.shimano.com" target="_blank" rel="noopener">Shimano Service Center</a> – Manuais Técnicos de Componentes</li>
+            </ul>
+        </section>
+    </main>
 
-  .fonte-box a:hover {
-    text-decoration: underline;
-  }
-</style>
-
-<div class="fonte-box">
-  <h3>Fontes e Referências de Pesquisa</h3>
-  <ul>
-    <li><a href="https://www.vadebike.org" target="_blank" rel="noopener">Vá de Bike</a> – Mobilidade e Ciclismo Urbano</li>
-    <li><a href="https://aliancabike.org.br" target="_blank" rel="noopener">Aliança Bike</a> – Associação Brasileira do Setor de Bicicletas</li>
-    <li><a href="https://www.pedal.com.br" target="_blank" rel="noopener">Pedal.com.br</a> – Testes e Notícias Técnicas</li>
-    <li><a href="https://www.gov.br/transportes/pt-br" target="_blank" rel="noopener">Código de Trânsito Brasileiro (CTB)</a> – Normas e Segurança</li>
-    <li><a href="https://bike.shimano.com" target="_blank" rel="noopener">Shimano Service Center</a> – Manuais Técnicos de Componentes</li>
-  </ul>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
