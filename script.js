@@ -1,61 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     let likes = 0;
-    let dislikes = 0;
-    let userState = null; // Guarda: 'like', 'dislike' ou null
+    let isLiked = false; // Controla se o utilizador deu curtida ou não
 
     const likeBtn = document.getElementById('likeBtn');
-    const dislikeBtn = document.getElementById('dislikeBtn');
     const likeCount = document.getElementById('likeCount');
-    const dislikeCount = document.getElementById('dislikeCount');
     const themeToggleBtn = document.getElementById('themeToggleBtn');
 
-    // Lógica do Botão Curtir
-    if (likeBtn) {
+    // Lógica do Botão de Curtida (Ativar e Desfazer)
+    if (likeBtn && likeCount) {
         likeBtn.addEventListener('click', () => {
-            if (userState === 'like') {
-                // Desfaz a curtida ao clicar novamente
+            if (isLiked) {
+                // Se já estiver curtido, desfaz a curtida
                 likes--;
-                userState = null;
+                isLiked = false;
                 likeBtn.classList.remove('active');
             } else {
-                // Se estava descurtido, remove o descurtir
-                if (userState === 'dislike') {
-                    dislikes--;
-                    dislikeBtn.classList.remove('active');
-                }
-                // Adiciona a curtida
+                // Se não estiver curtido, adiciona a curtida
                 likes++;
-                userState = 'like';
+                isLiked = true;
                 likeBtn.classList.add('active');
             }
 
             likeCount.textContent = likes;
-            dislikeCount.textContent = dislikes;
-        });
-    }
-
-    // Lógica do Botão Descurtir
-    if (dislikeBtn) {
-        dislikeBtn.addEventListener('click', () => {
-            if (userState === 'dislike') {
-                // Desfaz o descurtir ao clicar novamente
-                dislikes--;
-                userState = null;
-                dislikeBtn.classList.remove('active');
-            } else {
-                // Se estava curtido, remove a curtida
-                if (userState === 'like') {
-                    likes--;
-                    likeBtn.classList.remove('active');
-                }
-                // Adiciona o descurtir
-                dislikes++;
-                userState = 'dislike';
-                dislikeBtn.classList.add('active');
-            }
-
-            likeCount.textContent = likes;
-            dislikeCount.textContent = dislikes;
         });
     }
 
